@@ -1,5 +1,5 @@
 function usage()
-io.stderr:write("usage: make-iso [<gzinject-arg>...] [--no-trim]"
+io.stderr:write("usage: patch-iso [<gzinject-arg>...] [--no-trim]"
                 .. " [-m <input-rom>] [--mq-rom <input-rom>] [-o <output-iso>] <input-iso>\n")
 os.exit(1)
 end
@@ -80,8 +80,8 @@ gru.os_rm(opt_directory)
 local gzinject_cmd = gzinject ..
                     " -a extract" ..
                     " -d \"" .. opt_directory .. "\"" ..
-                    " -s \"" .. opt_iso .. "\"" ..
-                    " --verbose"
+                    " --verbose" ..
+                    " -s \"" .. opt_iso .. "\""
 if opt_sub then gzinject_cmd = gzinject_cmd .. " 1>&2" end
 local _,_,gzinject_result = os.execute(gzinject_cmd)
 if gzinject_result ~= 0 then return gzinject_result end
@@ -153,6 +153,7 @@ else
     gzinject_cmd = gzinject_cmd .. " -p \"gzi/controller/gz_remap_default_" .. gc_version.game_id .. ".gzi\""
 end
 end
+gzinject_cmd = gzinject_cmd .. " -p \"gzi/memcard/gz_memcard_" .. gc_version.game_id .. ".gzi\""
 if opt_out ~= nil then
 gzinject_cmd = gzinject_cmd .. " -s \"" .. opt_out .. "\""
 elseif opt_title ~= nil then

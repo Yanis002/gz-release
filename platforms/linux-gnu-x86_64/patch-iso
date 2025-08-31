@@ -1,0 +1,6 @@
+#!/bin/sh
+
+GZINJECT=bin/gzinject
+export GZINJECT
+bin/gru lua/patch-iso.lua "$@"
+rm -rf isoextract
