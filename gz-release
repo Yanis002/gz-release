@@ -268,6 +268,26 @@ copy_files()
 	cp -pR \
 		"${src_dir}"/homeboy/bin/hb-NACJ/homeboy.bin \
 		"${1}"/homeboy/bin/hb-NACJ
+
+	mkdir -p "${1}"/homeboy/bin/hb-D43E
+	cp -pR \
+		"${src_dir}"/homeboy/bin/hb-D43E/homeboy.bin \
+		"${1}"/homeboy/bin/hb-D43E
+
+	mkdir -p "${1}"/homeboy/bin/hb-D43J
+	cp -pR \
+		"${src_dir}"/homeboy/bin/hb-D43J/homeboy.bin \
+		"${1}"/homeboy/bin/hb-D43J
+
+	mkdir -p "${1}"/homeboy/bin/hb-PZLE
+	cp -pR \
+		"${src_dir}"/homeboy/bin/hb-PZLE/homeboy.bin \
+		"${1}"/homeboy/bin/hb-PZLE
+
+	mkdir -p "${1}"/homeboy/bin/hb-PZLJ
+	cp -pR \
+		"${src_dir}"/homeboy/bin/hb-PZLJ/homeboy.bin \
+		"${1}"/homeboy/bin/hb-PZLJ
 }
 
 make_release()
