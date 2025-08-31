@@ -60,8 +60,8 @@ jobs:
       - name: Checkout gz-gui
         uses: actions/checkout@v4
         with:
-          repository: glankk/gz-gui
-          ref: 1cbfc5bf93fd87f3aa6cb52a51119e9c650d1554
+          repository: Yanis002/gz-gui
+          ref: 48e6c2f4d908f585e75f277ef8099ad188177055
           path: gz-gui
 
       - name: Build gz-gui
