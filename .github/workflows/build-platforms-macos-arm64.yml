@@ -88,7 +88,7 @@ jobs:
           mkdir "${dst}"/lib/
 
           cp -a gz-gui/gz-gui.app "${pkg}"
-          cp "${src}"/{inject_ucode,patch-rom,patch-wad} "${dst}"/
+          cp "${src}"/{inject_ucode,patch-rom,patch-wad,patch-iso} "${dst}"/
           install -s n64/src/{ed64rdb/ed64rdb,libgru/gru} "${dst}"/bin/
           install -s gzinject/gzinject "${dst}"/bin/
 

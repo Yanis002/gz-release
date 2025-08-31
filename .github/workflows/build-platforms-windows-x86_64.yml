@@ -89,7 +89,7 @@ jobs:
           mkdir "${dst}"/bin/
 
           install -s gz-gui/release/gz-gui "${dst}"
-          cp "${src}"/{inject_ucode.bat,patch-rom.bat,patch-wad.bat} "${dst}"/
+          cp "${src}"/{inject_ucode.bat,patch-rom.bat,patch-wad.bat,patch-iso.bat} "${dst}"/
           install -s n64/src/{ed64rdb/ed64rdb,libgru/gru} "${dst}"/bin/
           install -s gzinject/gzinject "${dst}"/bin/
 
